@@ -6,3 +6,4 @@ ngrok config add-authtoken 1nlagZs8KP5r6jwgPcz5bnNWmGx_bBf4pastCofJefhWmA4n
 ngrok http 80
 sshpass -p ciro ssh -p 13831 u0_a338@2.tcp.ngrok.io
 https://github.com/BabylonJS/Babylon.js
+https://doc.babylonjs.com/features/featuresDeepDive/Exporters/Blender_Tips
