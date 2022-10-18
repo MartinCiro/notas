@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--https://threejs.org/-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="three.min.js"></script>
+
+    <script>
+
+        //creating scene
+        var scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x2a3b4c);
+
+        //add camera
+        var camera = new THREE.PerspectiveCamera(
+            75,
+            window.innerWidth/window.innerHeight
+        );
+
+        //renderer
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        //add geometry
+        var geometry = new THREE.BoxGeometry();
+        var material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true});
+        var cube = new THREE.Mesh(geometry, material);
+
+        scene.add(cube);
+
+        camera.position.z = 5;
+
+        
+        //animation
+        var animate = function(){
+            requestAnimationFrame(animate);
+
+            cube.rotation.x += 0.02;
+            cube.rotation.y += 0.02;
+
+            renderer.render(scene, camera);
+
+        }
+
+        animate();
+
+    </script>
+    <script>
+        //declaracion de variables const, var, let
+        /*
+        const es un parametro que asigna valores solidos (no se pueden modificar despues)
+        Let nos permite asignar un valor inmediato a una variable
+        
+        */
+        const valor1 = 10
+        const valor2 = 20
+        //const suma = valor1 + valor2 + a //no necesario
+
+        //console.log muestra mensajes en consola
+        console.log(valor1+valor2)
+        console.log("Prioridad de operadores: ()*/%**+-")
+        console.log("😊")
+
+        //para concatenar variables numericas y de texto se hace uso como en bashScript (${variable} ó ${valor1 + valor2})
+        console.log("if (comparacion){instruccion}else{instruccion}")
+        console.log("Para comparacion se hace uso de el operador && en donde ambas comparaciones tienen que ser verdaderas.\nPara validar si almenos una es cierta se hace uso de los operadores ||")
+        console.log("Para varias comparacines hacemos uso del operador switch(variableEvaluar){case 1:operacion}")
+        console.log("Para el uso del for se usa la sintaxis for(inicializacion;condicion;Incremento){}")
+        console.log("Funciones: para una funcion se hace uso de la sintaxis function NomFuncion(parametros a pasar separados por comas) {code}")
+        console.log("Un objeto es parecido a un array, almacena caracteristicas")
+        console.log("Ejemplo de cargar datos a una funcion:")
+        //Ejemplo carga de datos en variable: El resultado sera adicionar "stock" al objeto producto1
+        function fijarStock100(producto) {
+            producto.stock = 100
+        }
+        
+        const producto1 = {
+            descripcion: 'papas',
+            precio: 50.43
+        }
+
+        fijarStock100(producto1)
+        console.log(producto1)
+        console.log("Para eliminar datos de una funcion hacemos uso de la palabra clave delete.nombreparametro que esta dentro de la funcion")
+        console.log("Retorno de valores:\nEl retorno de un valor se hace cuando el valor es recien declarado y queremos obtener el resultado de dicha variable. Ejemplo con funciones y objetos:")
+        function retornarSuperficie(lado) {
+            const superficie = lado * lado
+            return superficie
+        }
+        console.log(retornarSuperficie(5))
+
+        console.log("Funciones fecla: Es una parametro que al ser cargado puede determinar que hacer despues de cargar el valor\nEjemplo:")
+        function operar(v1, v2, cb) {
+            let resu = cb(v1, v2)
+            return resu
+        }
+        let resultado = operar(5, 10, (v1, v2) => v1 + v2)
+        console.log(resultado)
+        console.log("Funcion anidada: Se encuentra dentro de una funcion y solo puede ser llamada por la funcion padre, la funcion 'hija' puede hacer uso de las variables del padre")
+        console.log("Se puede asignar un valor a los valores a pasar en la funcion\nEjemplo:")
+        function sumar(v1, v2, v3 = 0) {
+            return v1 + v2 + v3
+        }
+        console.log(sumar(1, 2))
+
+        console.log("Parametro rest (en una funcion): Permite llenar un array con cierta cantidad de datos, su sintaxis es function sumar(...numeros) {codigo}\nEjemplo:")
+        function sumar(...numeros) {
+            let suma = 0
+            for (let i = 0; i < numeros.length; i++) {
+                suma += numeros[i]
+            }
+            return suma
+        }
+        console.log(sumar(1, 2, 3, 4, 5))
+        console.log("Conversion a mayusculas : Este proceso se hace con instruccion toUpperCase(). const titulo = 'Administración' console.log(titulo.toUpperCase()) // ADMINISTRACIÓN")
+        console.log("Objetos: Para ecceder a la propiedad de un objeto hacemos uso del punto '.' más el nombre del atributo al cual queremos acceder. Ejemplo: const persona1 = {nombre: 'Juan', edad: 20, altura: 1.92} console.log(persona1.nombre)\nEl resultado será Juan")
+        console.log("Para añadir o quitar atributos a un objeto hacemos uso de las propiedades delete y '.variable'. Ejemplos: delete objeto.atributodelObj\nobjeto.atributo=valor")
+    </script>
+</body>
+</html>
