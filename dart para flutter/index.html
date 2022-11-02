@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart</title>
+</head>
+<style>
+    body{
+    background-color: aquamarine;
+}
+h1, h3{
+    text-align: center;   
+}
+p{
+    text-align: center;
+}
+b{
+    color: red;
+}
+ul{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
+<body>
+    <h1>Dart para flutter</h1>
+    <h3>Declaracion de variables</h3>
+    <ul>
+        <li><b>Var:</b> Es usado para declaracion de variable <i>sin tipo</i> de dato</li>
+        <li><b>Let:</b> </li>
+        <li><b>Const:</b> Indica que es un <i>Constante</i>, no permite <b>Modificaciones</b></li>
+        <li><b>Num:</b> Indica que se trata de un <i>Numero</i></li>
+        <li><b>Int:</b> Indica que se trata de un <i>Entero</i></li>
+        <li><b>Double:</b> Indica qeu se trata de un <i>Doble</i></li>
+    </ul>
+    <h3>Impresion de datos:</h3>
+    <p>Hacemos uso de la palabra clave <i>Print</i></p>
+
+    <h3>Concatenar variables</h3>
+    <p>Existen diferentes formas de concatenar una variable a un <u>texto</u> entre ellas se hace uso del simbolo <b>${Nombre Metodo(valor A pasar)}</b></p>
+    <h3>Comentarios:</h3>
+    <p>Para la asignacion de un comentario se hace uso de los simbolos <b>//</b> ó <b>/*...*/</b></p>
+
+    <h3>Signos de operacion aritmetica:</h3>
+    <p>Tenemos la <b>"+"</b> <u>(Suma)</u>, la <b>"-"</b> <u>(Resta)</u>, la <b>"/"</b> <u>(Division)</u>, la <b>"*"</b> <u>(Multiplicacion)</u>, el <b>"%"</b> <u>(Modulo)</u>, la <b>"~/"</b> <u>(division con resultado entero)</u></p>
+    
+    <h3>IDE</h3>
+    <p>Tenemos que se puede hacer uso del compilador online desde su pagina oficial <a href="https://dartpad.dev/" target="_blank"><b>Dart</b></a> en donde podemos ver ejemplos de una estructura de <b>repeticion</b>.</p>
+    
+    <h3>Retorno de datos</h3>
+    <p>Para retornar un valor hacemos uso de la palabra <b>return</b> y de no retornar el valor se hace uso de la palabra <b>void</b></p>
+    
+    <h3>Creacion de metodos</h3>
+    <p>Como en otros lenguajes de programacion es parecido a una <b>Funcion</b>, su sintaxis es:<br>Tipo de dato a recibir NombreMetodo(tipo de entrada de dato) {<br> return dato;<br>}</p>
+
+    <h3>Signos de comparacion</h3>
+    <p>Para hacer comparaciones podemos hacer uso de los caracteres <b>"<"</b> <u>(Menor)</u>, <b>">"</b> <u>(Mayor)</u>, <b>"=="</b> <u>(Iguales)</u>, <b>"!="</b> <u>(Distintos)</u>, <b>"<="</b> <u>(Menor o igual)</u>, <b>">=" </b><u>(Mayor o igual)</u>,</p>
+    <h3>Condiciones</h3>
+    <ul>
+        <li>
+            Para las condiciones tenemos el <b>if</b> que es una estructura comparativa, evaluara si la <u>condicion</u> es verdadera o falsa y con respecto al resultado hará una operacion, su estructura es simple:<br>
+            <img src="https://www2.eii.uva.es/fund_inf/cpp/_images/if_else_if.jpg" style="display:block; width: 30%; float: left; margin-right:auto" >
+            <b>Ejemplo:</b>
+            <p style="display: inline-block; vertical-align: top;background-color: aliceblue; font-size: 150%;">if (condicion) {<br>operacion;<br>} else if (condicion) {<br>Operacion;<br>} else {<br>Operacion al ser falso;<br>}<br>}</p>
+        </li>
+        <li>    
+            El <b>Switch</b> evalua los parametros y con respecto a ellos da un resultado especifico <br>
+            <img src="https://www.researchgate.net/publication/318258675/figure/fig2/AS:652579319062529@1532598442205/Figura-18-Estructura-Condicional-SWITCH-CASE.png" style="display:block; width: 45%; float: left; margin-right:auto" >
+            <b>Ejemplo:</b>
+            <p style="display: inline-block; vertical-align: top;background-color: aliceblue; font-size: 110%;">Switch(valorPasar) {<br>case 'encasodeser':<br>Operacion;<br>break;<br>case 'encasodeser':<br>Operacion;<br>break;<br>default:<br>Operacion;<br>}<br>}</p>
+        </li>
+    </ul>
+    <h3>Ciclos</h3>
+    <p>Existen 3 tipos de ciclos:</p>
+    <ul>
+        <li>    
+            El <b>For</b> es un ciclo en donde el primer valor es el desde donde empiezo, impone una condicion y un incremente<br>
+            <img src="https://pandora1992.files.wordpress.com/2012/06/4_22.gif?w=430&h=488" style="display:block; width: 45%; float: left; margin-right:auto" >
+            <b>Ejemplo:</b>
+            <p style="display: inline-block; vertical-align: top;background-color: aliceblue; font-size: 100%;">for (InicioDeLaVariable; comparacion; Incremete/Decremento) {<br>Operacion;<br>}</p>
+        </li>
+        <li>    
+            El <b>While</b> es la union del For y del if, primero solicita una <u>operacion</u>m una <u>Condicion</u> y si es <b><u>verdadera</u></b> repetira la operacion<br>
+            <img src="https://www.tutorialesprogramacionya.com/javaya/imagentema/foto055.jpg" style="display:block; width: 45%; float: left; margin-right:auto" >
+            <b>Ejemplo:</b>
+            <p style="display: inline-block; vertical-align: top;background-color: aliceblue; font-size: 110%;">While (condicion) {<br>Operacion<br>}</p>
+        </li>
+        <li>    
+            El <b>Do While</b> es similar al while, la diferencia es que este ejeucutará por lo menos <u>una vez</u><br>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwtDcm8qn-mr1LjRH-a-WHp7ruVifQ7bT6hg&usqp=CAU" style="display:block; width: 45%; float: left; margin-right:auto" >
+            <b>Ejemplo:</b>
+            <p style="display: inline-block; vertical-align: top;background-color: aliceblue; font-size: 110%;">do {<br>operacion;<br>Incremento/Decremento;<br>} while(condicion);</p>
+        </li>
+    </ul>
+</body>
+</html>
