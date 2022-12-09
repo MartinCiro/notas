@@ -23,6 +23,8 @@ http://authpre.senasofiaplus.edu.co/josso/signon/usernamePasswordLogin.do envia 
 <link rel="icon" type="image/png" href="f9.png" />
 lenguaje de señas 3d
 se puede escuchar musica sin anuncios dimensionando la pantalla con la etiqueta frame
+juego de skynet (terminator, maquina o humano)
+progrma para la comparacion de imagenes existentes con el mismo nombre
 
 de clounlab -> Login exitoso solo en clounlab
 
