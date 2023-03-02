@@ -113,3 +113,22 @@ de clounlab -> Login exitoso solo en clounlab
 
 plataforma wacom-> https://www.thatquiz.org/
 
+
+quickscript
+Inicio
+Declaracion ciclo
+Para ciclo = 1 Hasta 10 Incremento 2
+Escribir ciclo
+FinPara
+Fin
+
+Binario -> Decimal 
+Doble, 2 en 2, ejemplo 1,2,4,8,16,32,64,128, 256,512,1024,2048  
+para decir 37 100101 = 32 + 16 + 8 + 4 + 2 + 1 -> Eliminamos los 0= 32 + 4 + 1 = 37
+
+ej2=01010111 = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 -> eliminamos los 0 = 64 + 16 + 4 + 2 + 1
+
+Decimal -> Binario
+
+58=111010 -> empiezo tomando la tabla superior 
+
