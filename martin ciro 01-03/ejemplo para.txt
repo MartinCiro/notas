@@ -1,0 +1,6 @@
+Inicio
+Declaracion ciclo
+Para ciclo = 1 Hasta 10
+Escribir ciclo
+FinPara
+Fin

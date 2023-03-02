@@ -1,0 +1,15 @@
+Inicio
+Declaracion ciclo, cont, sum, multi
+multi = 1
+Para ciclo = 1 Hasta 5
+Si ciclo mod 2 = 0 Entonces
+cont = cont + 1
+Escribir "El par " & cont & " es " & ciclo
+Sino
+sum=sum+ciclo
+multi=multi*ciclo
+Escribir "La suma de los impares es: " & sum
+Escribir "la multiplicacion es " & multi
+FinSi
+FinPara
+Fin

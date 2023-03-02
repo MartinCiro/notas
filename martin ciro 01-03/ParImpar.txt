@@ -1,0 +1,12 @@
+Inicio
+Declaracion ciclo, cont, sum
+Para ciclo = 10 Hasta 20
+Si ciclo mod 2 = 0 Entonces
+cont = cont + 1
+Escribir "El par " & cont & " es " & ciclo
+Sino
+sum=sum+ciclo
+Escribir "La suma de los impares es: " & sum
+FinSi
+FinPara
+Fin
