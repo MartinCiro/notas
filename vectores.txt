@@ -1,0 +1,9 @@
+Inicio
+Declaracion loro(7), a, b, magola
+Para magola=0 Hasta 6
+loro(magola)=Leer("Digite el valor "&magola)
+FinPara
+Para magola=0 Hasta 6
+Escribir loro(magola)
+FinPara
+Fin

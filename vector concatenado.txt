@@ -1,0 +1,8 @@
+Inicio
+Declaracion loro(7), a, b, magola, var
+Para magola=0 Hasta 6
+loro(magola)=Leer("Digite el valor "&magola)
+var = var & " - " & loro(magola)
+FinPara
+Escribir "El vector completo es:  " & var
+Fin
