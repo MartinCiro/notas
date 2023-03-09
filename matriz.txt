@@ -1,0 +1,17 @@
+Inicio
+Declaracion loro(7), suegra(7), gato(7) magola,
+
+Para magola=1 Hasta 7
+loro(magola)=CEnteroCorto(Leer("Digite el valor del vector 1 "&magola))
+FinPara
+
+Para magola=1 Hasta 7
+suegra(magola)=CEnteroCorto(Leer("Digite el valor del vector 2 "&magola))
+FinPara
+
+Para magola=1 Hasta 7
+gato(magola)=suegra(magola)+loro(magola)
+Escribir "el valor de gato es: "& gato(magola) 
+FinPara
+
+Fin
