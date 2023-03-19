@@ -132,3 +132,20 @@ Decimal -> Binario
 
 58=111010 -> empiezo tomando la tabla superior 
 
+function convertir_entero(valor){
+		var resul_div = [];
+		var entradas = 0;
+		var resultado_binario = '';
+		while(valor > 0){
+			residuo = parseInt(valor % 2);
+			valor = parseInt(valor/2);
+			resul_div[entradas] = residuo;
+			entradas++;
+		}
+		for (var i = resul_div.length - 1; i >= 0; i--) {
+			resultado_binario += resul_div[i];
+		}
+		return resultado_binario;
+	}
+https://codepen.io/hcdiaz4/pen/BKxNWM
+
