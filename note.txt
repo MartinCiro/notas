@@ -149,3 +149,21 @@ function convertir_entero(valor){
 	}
 https://codepen.io/hcdiaz4/pen/BKxNWM
 
+
+vbs
+Sub Main
+dim valor as double
+dim miArray(15) as integer
+dim entrada as integer
+valor = 58
+entrada = 0
+
+while (valor>0)
+residuo=CDbl(valor)
+valor=Cint(valor/2)
+miArray(entrada) = residuo
+entrada=entrada+1
+wend
+msgbox entrada
+end sub
+
