@@ -151,19 +151,84 @@ https://codepen.io/hcdiaz4/pen/BKxNWM
 
 
 vbs
-Sub Main
-dim valor as double
-dim miArray(15) as integer
-dim entrada as integer
-valor = 58
-entrada = 0
+Sub Main()
+dim fila, colum, sColum, sFila, sDg, sIv As integer
+dim sFi, sCo, vrI as string
+dim matriz(100, 100) As integer
 
-while (valor>0)
-residuo=CDbl(valor)
-valor=Cint(valor/2)
-miArray(entrada) = residuo
-entrada=entrada+1
-wend
-msgbox entrada
+fila = 1 'Cint(inputbox("Digite el numero de Filas"))
+colum = 1 'Cint(inputbox("Digite el numero de Columnas"))
+
+
+if fila<>colum then
+	msgbox "El tamaño de la fila no es igual que la columna"
+elseif fila<=0 then
+	msgbox "El valor ingresado en Filas es menor a 0"
+elseif colum<=0 then
+	msgbox "El valor ingresado en columnas es menor a 0"
+else
+de = fila
+For f=1 To fila
+	For c=1 To colum
+		matriz(f,c) = inputbox("Digite los valores: " & f & " - " & c)
+	next c
+next f
+
+for f=1 to fila
+	sumaFil = 0
+	For c = 1 To colum
+		sFila = sFila + matriz(f, c)
+		vrI = vrI & " " & matriz(f,c)
+	Next c
+	sFi = sFi & " la suma de la Fila " & f & " es: " & sFila & Chr(13)
+next f
+
+for c = 1 to colum
+	sColum=0
+	for f = 1 to fila
+		sColum = sColum + matriz(f, c)
+	next f
+	sDg = sDg + matriz(c,c)
+	sIv = sumaInver + matriz(c, de)
+	de = de - 1
+	sCo = sCo & " la suma de la columa " & c & " es: " & sColum & Chr(13)
+next c
+msgbox "Los valores ingresados son: " & vrI & Chr(13) & sFi & sCo & "La suma de la diagonal es: " & sDg & Chr(13) & "La suma de la inversa es: " & sIv
+end if 
 end sub
+
+---dec a bin
+Sub Main()
+Dim num, cociente, residuo, binario, i
+num = InputBox("Digite el número decimal")
+cociente = CInt(num)
+binario = ""
+For i = 1 To Len(num)
+residuo = cociente Mod 2
+cociente = cociente \ 2
+binario = binario & CStr(residuo)
+If cociente = 0 Then Exit For
+Next i
+MsgBox "El número decimal " & num & " a binario es: " & binario
+End Sub
+
+bin a dec
+Sub Main()
+    Dim num, n1, contar, b, formula, bin
+    num = InputBox("Digite el numero Binario")
+    n1 = ""
+	For i = Len(num) To 1 Step -1
+    	n1 = n1 & Mid(num, i, 1)
+	Next i
+    contar = Len(num)
+    formula = 1
+    For b = 1 To contar
+        p = Mid(n1, b, 1)
+        If p = "1" Then
+            bin = bin + formula
+        End If
+        formula = formula * 2
+    Next b
+    MsgBox "El numero binario>> " & num & " a dec es: " & bin 
+End Sub
 
