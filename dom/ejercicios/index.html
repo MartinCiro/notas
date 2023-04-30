@@ -8,7 +8,7 @@
 
     <title>‎Lista de Ejercicios # 1‎ </title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -37,19 +37,9 @@
                 continuación, coloque el siguiente texto: “Hola, mi nombre es ___________ tengo _____ años y estoy
                 aprendiendo JavaScript”.‎
             </p>
-
-            <div class="caixa_outer blueborder">
-
-                <div id="student_message">
-                    This element has id="student_message". Show your message here.
-                </div>
-            </div>
-
-            <small>‎* Utilice el año actual para calcular su edad.‎
-            </small>
             <div class="two">
 
-                <div id="student_message" onclick="fnCambio()">
+                <div>
                     <p>Ingrese su nombre <input type="text" name="texto" placeholder="Nombre" /></p>
 
                     <p>Ingrese su apellido <input type="text" name="texto" placeholder="Apellido" /></p>
@@ -62,6 +52,15 @@
                     <input type="submit" value="Recargar" onclick="reloa();">
                 </div>
             </div>
+            <div class="caixa_outer1 blueborder">
+
+                <div id="student_message" onclick="enviarAlerta()">
+                    This element has id="student_message". Show your message here.
+                </div>
+            </div>
+
+            <small>‎* Utilice el año actual para calcular su edad.‎
+            </small>
 
             <br><br>
 
@@ -88,9 +87,9 @@
 
             =
 
-            <div class="caixa_outer inline">
+            <div class="caixa_outer2 inline">
 
-                <div id="result">
+                <div id="result" onclick="resu()">
                     ‎Mostrar el resultado con dos posiciones decimales
                 </div>
             </div>
@@ -114,23 +113,13 @@
     
                     </code>
                 </pre>
-                <div class="four">
+            <div class="four">
+                <div id="cu">
+                    <p>Ingrese el numero <input type="text" name="num" placeholder="Numero" /></p>
 
-                <div class="caja">
-                    <p>Ingrese su nombre <input type="text" name="texto" placeholder="Nombre" /></p>
-
-                    <p>Ingrese su apellido <input type="text" name="texto" placeholder="Apellido" /></p>
-
-                    <p>Ingrese su año de nacimiento <input type="text" name="texto" placeholder="Año de nacimiento" />
-                    </p>
-
-                    <input type="submit" value="Enviar" onclick="enviarAlerta();">
-
-                    <input type="submit" value="Recargar" onclick="reloa();">
-                    <div id="student_message" onclick="fnCambio()">
-
-                    </div>
+                    <input type="submit" value="Enviar" onclick="cuat();">
                 </div>
+            </div>
 
 
 
@@ -138,7 +127,7 @@
 
             <p>
                 5) ‎Enviar a la consola el resultado de la siguiente operación: 32‎‎<sup _istranslated="1"
-                    _mstmutation="1">‎6‎</sup>
+                    _mstmutation="1">‎6‎</sup> <input type="submit" value="Imprimir consola" onclick="exp();">
 
             </p>
 
@@ -147,16 +136,17 @@
             <p>
                 6) ‎Tenga en cuenta los siguientes nombres de variable e informe cuáles no son válidos y por qué:‎
 
-            <ul>
-                <p>a) var NAME;</p>
+            
+                <ol type="a" id="lis">
+                <p>a) var NAME;</p> 
                 <p>b) var $num1;</p>
                 <p>c) var typeof; </p>
                 <p>d) var first-name; </p>
                 <p>e) var attempt_2;</p>
                 <p>f) var 2ndAttempt; </p>
                 <p>g) var full name; </p>
-            </ul>
-
+            </ol>
+            <input type="submit" value="Evaluar" onclick="eva();">
             </p>
 
             <br>
@@ -173,12 +163,12 @@
     var pressure;
     var temperature = null;
 
-    console.log(quantity += quantity); 
-    console.log( (7+5) / number + 2 ); 
-    console.log(pressure); 
-    console.log(temperature); 
-    console.log(typeof pressure); 
-    console.log(typeof temperature);
+    console.log(quantity += quantity); //Concatenacion de string
+    console.log( (7+5) / number + 2 ); //Operacion matematica = 4
+    console.log(pressure); //No tiene valor definido 
+    console.log(temperature); // Es nulo
+    console.log(typeof pressure); //Imprimiría indefinido
+    console.log(typeof temperature); //Por qué imprime objeto si es vlr nul?
 
                     
                     </code>
@@ -190,7 +180,7 @@
                 8)‎ Realice las transformaciones en las direcciones URL siguientes:‎
 
             </p>
-
+            <div onclick="nose()">
             <div class="caixa_outer inline">
                 <div id="url_1">
                     www.sena.edu.co
@@ -217,7 +207,7 @@
                     show the url without https:// aquí‎
                 </div>
             </div>
-
+        </div>
 
             <div id="bottom-area">
                 <div class="prev-next-link">
