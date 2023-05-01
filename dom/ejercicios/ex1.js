@@ -48,5 +48,9 @@ function eva() {
     document.getElementById('lis').innerHTML = "<ol type='a' id='lis'><li>var <strong>NAME;</strong> Valido, porque está con mayuscula y cumple con las caracteristicas</li><li>var <strong>$num1;</strong> Invalido, porque empieza con un caracter especial</li><li>var <strong>typeof; </strong> Invalido, porque es una palabra clave del lenguaje</li><li>var <strong>first-name; </strong> Invalido, porque tiene caracteres especiales</li><li>var <strong>attempt_2;</strong> Valido, porque no empieza por numeros o caracteres especiales</li><li>var <strong>2ndAttempt; </strong> Invalido, porque no debe empezar por numeros</li><li>var <strong>full name; </strong> Invalido, porque en la declaracion de una variable no puede haber espacion</li></ol>";
 }
 function nose(){
-    
+    document.getElementById('aq').innerHTML = "<a href='http://www.google.com' target='_blank' rel='noopener noreferrer'>www.google.com</a>";
+}
+
+function nose1(){
+    document.getElementById('aq1').innerHTML = "<a href='https://www.sena.edu.co' target='_blank' rel='noopener noreferrer'>https://www.sena.edu.co</a>";
 }
