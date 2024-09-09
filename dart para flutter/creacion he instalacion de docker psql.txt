@@ -8,4 +8,9 @@ rutaArchivo: Referencia a la ruta donde almacene el archivo
 2. Ejecutar el comando "wsl install"
 3. Ir a la pagina de docker y descargar el instalador (https://www.docker.com/)
 4. Ejecutar el instalador de docker y dar a todo siguiente
-5. Descargar la imagen oficial y mas reciente de docker
+5. Descargar la imagen oficial y mas reciente de docker, en la misma cmd ejecutar "docker pull postgres"
+6. Despues de finalizar la descarga ejecutar el comando "docker run --name psql -e POSTGRES_PASSWORD=aquiPasswordBd -p 5432:5432 -d postgres"
+7. Despues de crear el contenedor copiamos el archivo .sql al contenedor, ejecutar el comando "docker cp temporal.sql psql:/temporal.sql"
+8. Ahora debe crear la bd para que al restaurar NO de error, el comando es "docker exec -i psql psql -U postgres -c "CREATE DATABASE nombreBD;"" cuidado aquí, el primer psql hace referencia al NOMBRE DEL CONTENEDOR
+9. Ingresamos al contenedor y ejecutamos la herramienta pg_restore. Para ingresar al contenedor usamos "docker exec -it psql bash" y para restaurar la copia desde el contenedor usamos "pg_restore -U postgres -d nombreBD /temporal.sql"
+10. Descargue dbeaver community y haga la conexion como en el video
