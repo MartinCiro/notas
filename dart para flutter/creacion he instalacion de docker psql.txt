@@ -1,0 +1,11 @@
+Antes de ejecutar el paso a paso tener en cuenta el glosario de palabras:
+nombreBD: Hace referencia al nombre de la base de datos
+aquiPasswordBd: Hace  referencia a la contraseña que desee agregar a la base de datos
+rutaArchivo: Referencia a la ruta donde almacene el archivo
+--name psql: Referencia al nombre del contenedor, es lo que esta consiguiente a la bandera "--name", ver manual de docker si es necesario
+
+1. Abrir cmd
+2. Ejecutar el comando "wsl install"
+3. Ir a la pagina de docker y descargar el instalador (https://www.docker.com/)
+4. Ejecutar el instalador de docker y dar a todo siguiente
+5. Descargar la imagen oficial y mas reciente de docker
